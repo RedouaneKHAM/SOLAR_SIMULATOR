@@ -1,6 +1,5 @@
 class SimulationsController < ApplicationController
 
-
   def new
     @simulation = Simulation.new
   end
@@ -8,9 +7,13 @@ class SimulationsController < ApplicationController
   def create
     @simulation = Simulation.new(simulation_params)
     if @simulation.save!
-      redirect_to arrangement_path(@simulation)
+      redirect_to simulations_path(@simulation)
     else
       render :new, status: :unprocessable_entity
+    end
+
+    def show
+      @simulation = Simulation.find(params[:id])
     end
   end
 

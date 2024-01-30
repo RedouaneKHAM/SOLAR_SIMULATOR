@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'solarkits/index'
   # get 'simulations/new'
   # get 'simulations/create'
   devise_for :users
@@ -11,5 +12,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  resource :simulations, only: [:new, :create, :index]
+  resource :simulations, only: [:show,:new,:create]
+  resource :reports, only: [:show]
+  resource :solarkits, only: [:index]
+
 end
