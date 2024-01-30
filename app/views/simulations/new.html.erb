@@ -1,2 +1,9 @@
 <h1>Simulations#new</h1>
 <p>Find me in app/views/simulations/new.html.erb</p>
+
+<%= simple_form_for @simulation do |f| %>
+  <%= f.input :type_of_property, collection: ['Maison avec toiture', 'Maison sanst toiture','industrie','Ferme','Villa','Appartement'], include_blank: false %>
+  <%= f.input :region, collection: ['Tanger-Tétouan-Al Hoceima', 'Oriental','Fès-Meknès','Villa','Rabat-Salé-Kénitra','Beni Mellal-Khénifra','Casablanca-Settat','Marrakech-Safi', 'Drâa-Tafilalet','Souss-Massa','Guelmim-Oued Noun','Laâyoune-Saguia al Hamra', 'Dakhla-Oued Ed-Dahab'], include_blank: false %>
+  <%= f.input :avg_year_consumption %>
+  <%= f.button :submit %>
+<% end %>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'simulations/new'
-  get 'simulations/create'
+  # get 'simulations/new'
+  # get 'simulations/create'
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -11,5 +11,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  resource :simulation, only: [:new, :create]
+  resource :simulations, only: [:new, :create, :index]
 end
