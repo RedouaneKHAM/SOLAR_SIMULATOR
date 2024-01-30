@@ -25,7 +25,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_30_144056) do
 
   create_table "simulations", force: :cascade do |t|
     t.string "type_of_property"
-    t.integer "regionavg_year_consumption"
+    t.string "region"
+    t.integer "avg_year_consumption"
     t.bigint "user_id", null: false
     t.bigint "report_id", null: false
     t.datetime "created_at", null: false
