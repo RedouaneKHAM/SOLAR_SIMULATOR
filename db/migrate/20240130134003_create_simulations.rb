@@ -5,8 +5,6 @@ class CreateSimulations < ActiveRecord::Migration[7.1]
       t.string :region
       t.integer :avg_year_consumption
       t.references :user, null: false, foreign_key: true
-      t.references :report, null: false, foreign_key: true
-
       t.timestamps
     end
   end

@@ -19,8 +19,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_30_144056) do
     t.integer "min_production"
     t.integer "max_production"
     t.integer "daily_consumption"
+    t.bigint "simulation_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["simulation_id"], name: "index_reports_on_simulation_id"
   end
 
   create_table "simulations", force: :cascade do |t|
@@ -28,10 +30,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_30_144056) do
     t.string "region"
     t.integer "avg_year_consumption"
     t.bigint "user_id", null: false
-    t.bigint "report_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["report_id"], name: "index_simulations_on_report_id"
     t.index ["user_id"], name: "index_simulations_on_user_id"
   end
 
@@ -61,7 +61,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_30_144056) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "simulations", "reports"
+  add_foreign_key "reports", "simulations"
   add_foreign_key "simulations", "users"
   add_foreign_key "solarkits", "users"
 end

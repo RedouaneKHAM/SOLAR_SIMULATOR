@@ -9,6 +9,6 @@ class SimulationsController < ApplicationController
 
   private
   def simulation_params
-    params.require(:simulation).permit(:type_of_property, :subject, :agent_id)
+    params.require(:simulation).permit(:type_of_property, :region, :avg_year_consumption)
   end
 end

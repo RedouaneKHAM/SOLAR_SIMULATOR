@@ -1,3 +1,3 @@
 class Report < ApplicationRecord
-  has_one :simulation
+  belongs_to :simulation
 end
