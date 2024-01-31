@@ -1,4 +1,7 @@
 <% @report.simulation%>
 <h1>Reports#show</h1>
 <p>Find me in app/views/reports/show.html.erb</p>
-<ul><li>daily_consumption is <%= @report.daily_consumption %>kw</li></ul>
+
+  <p>daily_consumption is <%= @report.daily_consumption %>Wh/j</p>
+  <%= render partial: "power", locals: { report: @report } %>
+  
