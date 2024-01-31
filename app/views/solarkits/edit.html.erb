@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Solarkits#new</h1>
+  <p>Find me in app/views/solarkits/edit.html.erb</p>
+<%= simple_form_for @solarkit do |f| %>
+    <%= f.input :power %>
+    <%= f.input :min_production %>
+    <%= f.input :max_production %>
+    <%= f.input :price %>
+    <%= f.input :installation_price %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
