@@ -1,2 +1,18 @@
 <h1>Solarkits#index</h1>
 <p>Find me in app/views/solarkits/index.html.erb</p>
+<div class="container mt-10">
+   <h1 class="text-center mb-2">Solarkits</h1>
+    <div class="cards">
+      <% @solarkits.each do |solarkit| %>
+          <div class="card mb-2">
+            <div class="card-body">
+              <h5 class="card-title text-center">Power is <%= solarkit.power %></h5>
+              <h5 class="card-text text-center">Min_production is <%= solarkit.min_production %></h5>
+              <h5 class="card-text text-center">Max_production is <%= solarkit.max_production %></h5>
+              <h5 class="card-text text-center">Price is <%= solarkit.price %></h5>
+              <h5 class="card-text text-center">Installation_price is <%= solarkit.installation_price %></h5>
+            </div>
+          </div>
+      <% end %>
+    </div>
+</div>
