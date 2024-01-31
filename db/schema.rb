@@ -15,9 +15,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_30_144056) do
   enable_extension "plpgsql"
 
   create_table "reports", force: :cascade do |t|
-    t.integer "power"
-    t.integer "min_production"
-    t.integer "max_production"
     t.integer "daily_consumption"
     t.bigint "simulation_id", null: false
     t.datetime "created_at", null: false
@@ -28,7 +25,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_30_144056) do
   create_table "simulations", force: :cascade do |t|
     t.string "type_of_property"
     t.string "region"
-    t.integer "avg_year_consumption"
+    t.integer "month_fst"
+    t.integer "month_scd"
+    t.integer "month_trd"
+    t.integer "month_fth"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
