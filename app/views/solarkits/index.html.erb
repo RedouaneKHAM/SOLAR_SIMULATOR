@@ -1,5 +1,16 @@
+<style>
+  .card {
+    transition: box-shadow 0.3s ease;
+    border-radius: 10px; /* Adding border-radius to all cards */
+  }
+
+  .card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+</style>
+
 <div class="container mt-10">
-   <h1 class="text-center my-2">Solarkits</h1>
+   <h1 class="text-center mb-2">Solarkits</h1>
     <div class="row">
       <% @solarkits.each do |solarkit| %>
         <div class="col-md-4">

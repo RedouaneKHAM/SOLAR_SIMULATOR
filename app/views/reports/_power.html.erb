@@ -1,43 +1,38 @@
-
 <% if report.daily_consumption <= 420 %>
-   <ul>
-   <li>Production minimale est 429 Wh/j</li>
-   <li>Production maximale est 1690 Wh/j</li>
-   <li>Puissance du kit est 525 Wh/j</li>
-   </ul>
-     <%= link_to "See your solar kit", solarkit_path(1) %>
-
+  <div class="text-center">
+    Production minimale est 429 Wh/j<br>
+    Production maximale est 1690 Wh/j<br>
+    Puissance du kit est 525 Wh/j<br>
+    <%= link_to "See your solar kit", solarkit_path(1) %>
+  </div>
 <% elsif report.daily_consumption <= 660 %>
-<ul>
-   <li>Production minimale est 670 Wh/j</li>
-   <li>Production maximale est 2639 Wh/j</li>
-   <li>Puissance du kit est 820 Wh/j</li>
-   </ul>
-        <%= link_to "See your solar kit", solarkit_path(2) %>
-
+  <div class="text-center">
+    Production minimale est 670 Wh/j<br>
+    Production maximale est 2639 Wh/j<br>
+    Puissance du kit est 820 Wh/j<br>
+    <%= link_to "See your solar kit", solarkit_path(2) %>
+  </div>
 <% elsif report.daily_consumption <= 1000 %>
-<ul>
-   <li>Production minimale est 1005 Wh/j</li>
-   <li>Production maximale est 3959 Wh/j</li>
-   <li>Puissance du kit est 1230 Wh/j</li>
-  </ul>
-        <%= link_to "See your solar kit", solarkit_path(3) %>
-
+  <div class="text-center">
+    Production minimale est 1005 Wh/j<br>
+    Production maximale est 3959 Wh/j<br>
+    Puissance du kit est 1230 Wh/j<br>
+    <%= link_to "See your solar kit", solarkit_path(3) %>
+  </div>
 <% elsif report.daily_consumption <= 1300 %>
-<ul>
-   <li>Production minimale est 1339 Wh/j</li>
-   <li>Production maximale est 1640 Wh/j</li>
-   <li>Puissance du kit est 1640 Wh/j</li>
-  </ul>
-        <%= link_to "See your solar kit", solarkit_path(4) %>
-
+  <div class="text-center">
+    Production minimale est 1339 Wh/j<br>
+    Production maximale est 1640 Wh/j<br>
+    Puissance du kit est 1640 Wh/j<br>
+    <%= link_to "See your solar kit", solarkit_path(4) %>
+  </div>
 <% elsif report.daily_consumption <= 3000 %>
-<ul>
-   <li>Production minimale est 3690 Wh/j</li>
-   <li>Production maximale est 11878 Wh/j</li>
-   <li>Puissance du kit est 3690 Wh/j</li>
-   </ul>
-  <%= link_to "See your solar kit", solarkit_path(5) %>
+  <div class="text-center">
+    Production minimale est 3690 Wh/j<br>
+    Production maximale est 11878 Wh/j<br>
+    Puissance du kit est 3690 Wh/j<br>
+    <%= link_to "See your solar kit", solarkit_path(5) %>
+  </div>
 <% else %>
-   <p>contact us for more information</p>
+  <p class="text-center">Contact us for more information</p>
 <% end %>

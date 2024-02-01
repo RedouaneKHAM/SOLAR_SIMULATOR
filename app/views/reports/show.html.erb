@@ -1,8 +1,10 @@
 <div class="container mt-3">
-<h1>Your report </h1>
-<% @report.simulation%>
-  <p>Votre consommarion journalière est <%= @report.daily_consumption %>Wh/j</p>
-  <p>Le kit solaire qu'on vous propose a une
-  <%= render partial: "power", locals: { report: @report } %>
-</p>
+  <div class="card text-center rounded shadow">
+    <div class="card-body">
+      <h1 class="card-title">Your Report</h1>
+      <% @report.simulation %>
+      <p>Votre consommation journalière <%= @report.daily_consumption %> Wh/day</p>
+      <p>Le kit solaire proposé a une <%= render partial: "power", locals: { report: @report } %></p>
+    </div>
+  </div>
 </div>
