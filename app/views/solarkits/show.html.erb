@@ -1,12 +1,19 @@
-<div class="container mt-2">
-  <div class="row justify-content-center"> <!-- Center the row horizontally -->
-    <div class="col-md-6"> <!-- Adjust the column width based on your preference -->
-      <div class="card mb-3" style="max-width: 540px;">
+<style>
+  .card-hover:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+</style>
+
+<div class="container mt-4 rounded">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card mb-3 card-hover" style="max-width: 540px;">
         <div class="row g-0">
           <div class="col-md-4">
             <%= image_tag(@solarkit.image, class:"img-fluid rounded-start h-100", alt:"solarkit_image") %>
           </div>
-          <div class="col-md-8">
+          <div class="col-md-8 bg-white">
             <div class="card-body">
               <h5 class="card-title">Solarkit <%=@solarkit.id  %></h5>
               <p class="card-text">Power is <%= @solarkit.power %></p>
@@ -15,10 +22,11 @@
               <p class="card-text">price is <%= @solarkit.price %></p>
               <p class="card-text"><small class="text-muted">installation_price is <%= @solarkit.installation_price %></small></p>
             </div>
+            <div class="bg-success text-white p-3 ">
+                <%= link_to "cliquez ici commadez votre kit ", new_simulation_path, class: "text-white" %>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
