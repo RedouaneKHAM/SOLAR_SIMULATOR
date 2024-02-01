@@ -1,5 +1,19 @@
-<div class="container mt-3 ">
-  <div class="card text-center rounded shadow bg-white">
+<style>
+  .container {
+    border: 2px solid #008000;
+    box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+  }
+
+  .container:hover {
+    border-color: #006400;
+    box-shadow: 0 0 15px rgba(0, 100, 0, 0.8); 
+  }
+</style>
+
+<div class="container mt-3">
+  <div class="card text-center rounded shadow">
     <div class="card-body">
       <h1 class="card-title">Your Report</h1>
       <% @report.simulation %>

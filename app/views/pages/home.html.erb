@@ -1,3 +1,18 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<%=link_to "Calculez votre consommation ", new_simulation_path  %>
+<style>
+  .background-image {
+    background-image: url('<%= asset_path('back.png') %>');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+</style>
+
+<div class="background-image">
+  <div class="container">
+    <h1>Pages#home</h1>
+    <p>Find me in app/views/pages/home.html.erb</p>
+    <%= link_to new_simulation_path, class: "btn btn-primary btn-lg" do %>
+      <i class="fa-solid fa-calculator"></i> Calculez votre consommation
+    <% end %>
+  </div>
+</div>

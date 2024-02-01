@@ -1,7 +1,25 @@
-  <h1>Simulations#new</h1>
-  <p>Find me in app/views/simulations/new.html.erb</p>
-<div class="container my-3 p-4 bg-white rounded">
+<style>
+  .container {
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
 
+  .container:hover {
+    border-color: #008000;
+    box-shadow: 0 0 15px rgba(0, 128, 0, 0.5);
+  }
+
+  input[type="text"], select {
+    transition: border-color 0.9s ease;
+    border: 1px solid #ced4da;
+  }
+
+  input[type="text"]:focus, select:focus {
+    border-color: #008000;
+  }
+</style>
+
+<div class="container my-3 p-4 bg-white rounded" style="max-width: 800px;"> 
   <%= simple_form_for @simulation do |f| %>
     <div class="row">
       <div class="col-md-6">
