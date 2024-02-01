@@ -1,10 +1,19 @@
-<div class="container">
-<ul>
-<li>Power is <%= @solarkit.power %></li>
-<li>min_production is <%= @solarkit.min_production %></li>
-<li>max_production is <%= @solarkit.max_production %></li>
-<li>price is <%= @solarkit.price %></li>
-<li>installation_price is <%= @solarkit.installation_price %></li>
-<%= link_to "edit the solarkit", edit_solarkit_path(@solarkit) %>
-</ul>
+<div class="container mt-2">
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <%= image_tag(@solarkit.image, class:"img-fluid rounded-start h-100", alt:"solarkit_image") %>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Solarkit <%=@solarkit.id  %></h5>
+            <p class="card-text">Power is <%= @solarkit.power %></p>
+            <p class="card-text">min_production is <%= @solarkit.min_production %></p>
+            <p class="card-text">max_production is <%= @solarkit.max_production %></p>
+            <p class="card-text">price is <%= @solarkit.price %></p>
+            <p class="card-text"><small class="text-muted">installation_price is <%= @solarkit.installation_price %></small></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,7 +1,8 @@
+<div class="container mt-3">
+<h1>Your report </h1>
 <% @report.simulation%>
-<h1>Reports#show</h1>
-<p>Find me in app/views/reports/show.html.erb</p>
-
-  <p>daily_consumption is <%= @report.daily_consumption %>Wh/j</p>
+  <p>Votre consommarion journalière est <%= @report.daily_consumption %>Wh/j</p>
+  <p>Le kit solaire qu'on vous propose a une
   <%= render partial: "power", locals: { report: @report } %>
-
+</p>
+</div>

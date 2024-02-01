@@ -1,31 +1,42 @@
+
 <% if report.daily_consumption <= 420 %>
-   <p>Production minimale est 429 Wh/j</p>
-   <p>Production maximale est 1690 Wh/j</p>
-   <p>Puissance du kit est 525 Wh/j</p>
+   <ul>
+   <li>Production minimale est 429 Wh/j</li>
+   <li>Production maximale est 1690 Wh/j</li>
+   <li>Puissance du kit est 525 Wh/j</li>
+   </ul>
      <%= link_to "See your solar kit", solarkit_path(1) %>
 
 <% elsif report.daily_consumption <= 660 %>
-   <p>Production minimale est 670 Wh/j</p>
-   <p>Production maximale est 2639 Wh/j</p>
-   <p>Puissance du kit est 820 Wh/j</p>
+<ul>
+   <li>Production minimale est 670 Wh/j</li>
+   <li>Production maximale est 2639 Wh/j</li>
+   <li>Puissance du kit est 820 Wh/j</li>
+   </ul>
         <%= link_to "See your solar kit", solarkit_path(2) %>
 
 <% elsif report.daily_consumption <= 1000 %>
-   <p>Production minimale est 1005 Wh/j</p>
-   <p>Production maximale est 3959 Wh/j</p>
-   <p>Puissance du kit est 1230 Wh/j</p>
+<ul>
+   <li>Production minimale est 1005 Wh/j</li>
+   <li>Production maximale est 3959 Wh/j</li>
+   <li>Puissance du kit est 1230 Wh/j</li>
+  </ul>
         <%= link_to "See your solar kit", solarkit_path(3) %>
 
 <% elsif report.daily_consumption <= 1300 %>
-   <p>Production minimale est 1339 Wh/j</p>
-   <p>Production maximale est 1640 Wh/j</p>
-   <p>Puissance du kit est 1640 Wh/j</p>
+<ul>
+   <li>Production minimale est 1339 Wh/j</li>
+   <li>Production maximale est 1640 Wh/j</li>
+   <li>Puissance du kit est 1640 Wh/j</li>
+  </ul>
         <%= link_to "See your solar kit", solarkit_path(4) %>
 
 <% elsif report.daily_consumption <= 3000 %>
-   <p>Production minimale est 3690 Wh/j</p>
-   <p>Production maximale est 11878 Wh/j</p>
-   <p>Puissance du kit est 3690 Wh/j</p>
+<ul>
+   <li>Production minimale est 3690 Wh/j</li>
+   <li>Production maximale est 11878 Wh/j</li>
+   <li>Puissance du kit est 3690 Wh/j</li>
+   </ul>
   <%= link_to "See your solar kit", solarkit_path(5) %>
 <% else %>
    <p>contact us for more information</p>
