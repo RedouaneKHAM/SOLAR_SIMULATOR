@@ -22,7 +22,6 @@ class SimulationsController < ApplicationController
 
   def show
     @simulation = Simulation.find(params[:id])
-
   end
 
   private

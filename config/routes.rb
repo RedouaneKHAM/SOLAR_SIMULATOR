@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'contacts/new'
+  get 'contacts/create'
+  get 'contacts/show'
   get 'solarkits/index'
   # get 'simulations/new'
   # get 'simulations/create'
@@ -17,4 +20,7 @@ Rails.application.routes.draw do
   resources :simulations, only: [:show,:new,:create]
   resources :reports, only: [:show]
   resources :solarkits
+  resources :contacts, only: [:show,:new,:create]
+
+
 end
