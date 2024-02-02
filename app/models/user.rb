@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_many :solarkits
   has_many :simulations
   has_many :reports, through: :simulations
+  has_many :contacts
 end

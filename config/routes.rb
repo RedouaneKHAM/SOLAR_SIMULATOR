@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   get 'contacts/create'
   get 'contacts/show'
   get 'solarkits/index'
-  # get 'simulations/new'
-  # get 'simulations/create'
   devise_for :users
   root to: "pages#home"
   get "about", to: "pages#about"
@@ -21,6 +19,4 @@ Rails.application.routes.draw do
   resources :reports, only: [:show]
   resources :solarkits
   resources :contacts, only: [:show,:new,:create]
-
-
 end
