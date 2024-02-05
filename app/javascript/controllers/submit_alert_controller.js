@@ -9,7 +9,7 @@ console.log("Hello, Stimulus!", this.element);
     event.preventDefault();
     Swal.fire({
       title: "Good job!",
-      text: "Your quiz is submited!",
+      text: "input is submited!",
       icon: "success"
     }).then((result) => {
       if (result.isConfirmed) {
