@@ -1,46 +1,34 @@
-<style>
-  .container {
-    border: 2px solid transparent;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .container:hover {
-    border-color: #008000;
-    box-shadow: 0 0 15px rgba(0, 128, 0, 0.5);
-  }
-
-  input[type="text"], select {
-    transition: border-color 0.9s ease;
-    border: 1px solid #ced4da;
-  }
-
-  input[type="text"]:focus, select:focus {
-    border-color: #008000;
-  }
-</style>
-
-<div class="container my-3 p-4 bg-white rounded" style="max-width: 800px;"> 
+<div class="container my-3 p-4 bg-white rounded" style="max-width: 800px;">
   <%= simple_form_for @simulation do |f| %>
     <div class="row">
-      <div class="col-md-6">
-        <%= f.input :type_of_property, collection: ['Maison avec toiture', 'Maison sans toiture', 'Industrie', 'Ferme', 'Villa', 'Appartement'], include_blank: false %>
+      <div class="col-md-12">
+        <p>Please fill out the form below to simulate the appropriate solar kit for your needs. Ensure you select your region, property type, and input the monthly energy consumption from your electricity bills. For accurate results, it's recommended to choose one month from each trimester.</p>
       </div>
       <div class="col-md-6">
-        <%= f.input :region, collection: ['Tanger-Tétouan-Al Hoceima', 'Oriental', 'Fès-Meknès', 'Villa', 'Rabat-Salé-Kénitra', 'Beni Mellal-Khénifra', 'Casablanca-Settat', 'Marrakech-Safi', 'Drâa-Tafilalet', 'Souss-Massa', 'Guelmim-Oued Noun', 'Laâyoune-Saguia al Hamra', 'Dakhla-Oued Ed-Dahab'], include_blank: false %>
+        <% ['Maison avec toiture', 'Maison sans toiture', 'Industrie', 'Ferme', 'Villa', 'Appartement'].each do |property_type| %>
+          <%= f.radio_button :type_of_property, property_type, class: 'tag-selector', id: property_type.parameterize %>
+          <%= label_tag property_type.parameterize, property_type, class: 'tag-item' %>
+        <% end %>
+      </div>
+      <div class="col-md-6">
+        <% ['Tanger-Tétouan-Al Hoceima', 'Oriental', 'Fès-Meknès', 'Rabat-Salé-Kénitra', 'Beni Mellal-Khénifra', 'Casablanca-Settat', 'Marrakech-Safi', 'Drâa-Tafilalet', 'Souss-Massa', 'Guelmim-Oued Noun', 'Laâyoune-Saguia al Hamra', 'Dakhla-Oued Ed-Dahab'].each do |region| %>
+          <%= f.radio_button :region, region, class: 'tag-selector', id: region.parameterize %>
+          <%= label_tag region.parameterize, region, class: 'tag-item' %>
+        <% end %>
       </div>
     </div>
     <div class="row">
       <div class="col-md-3">
-        <%= f.input :month_fst %>
+      <%= f.input :month_fst, label: "Jan/Feb/Mar", input_html: { min: 0 }, class: 'month-selector' %>
       </div>
       <div class="col-md-3">
-        <%= f.input :month_scd %>
+        <%= f.input :month_scd, label: "Apr/May/Jun", input_html: { min: 0 }, class: 'month-selector' %>
       </div>
       <div class="col-md-3">
-        <%= f.input :month_trd %>
+        <%= f.input :month_trd, label: "Jul/Aug/Sep", input_html: { min: 0 }, class: 'month-selector' %>
       </div>
       <div class="col-md-3">
-        <%= f.input :month_fth %>
+        <%= f.input :month_fth, label: "Oct/Nov/Dec", input_html: { min: 0 }, class: 'month-selector' %>
       </div>
     </div>
     <div class="row">

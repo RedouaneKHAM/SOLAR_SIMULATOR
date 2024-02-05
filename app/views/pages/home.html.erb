@@ -1,18 +1,17 @@
-<style>
-  .background-image {
-    background-image: url('<%= asset_path('back.png') %>');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-  }
-</style>
-
-<div class="background-image">
-  <div class="container">
-    <h1>Pages#home</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
-    <%= link_to new_simulation_path, class: "btn btn-primary btn-lg" do %>
-      <i class="fa-solid fa-calculator"></i> Calculez votre consommation
-    <% end %>
+<%= content_for(:navbar_class, "navbar-home") %>
+<div class="banner">
+  <div class="banner-content">
+    <h1>Solar Energy Services at Your Doorstep</h1>
+    <p >Welcome to our solar kit store! Here,
+     you can explore our range of solar kits
+      tailored to meet your energy needs.
+       Calculate the perfect solar solution
+        based on your monthly electricity consumption,
+         making a wise investment while contributing
+          to a greener world. Start your journey towards
+           sustainable energy today!</p>
+    <a href="<%= new_simulation_path %>" class="btn btn-outline-success btn-lg custom-button">
+      <i class="fa-solid fa-calculator"></i> Start your simulation
+    </a>
   </div>
 </div>

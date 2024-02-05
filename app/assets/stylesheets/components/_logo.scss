@@ -1,0 +1,11 @@
+.logo {
+  width: 40px;
+  border-radius: 0px;
+  box-shadow: 0 1px 2px rgb(180, 177, 177);
+  border: rgb(0, 0, 0) 3px solid;
+  transition: box-shadow 0.9s ease;
+}
+
+.logo:hover {
+  box-shadow: 0 4px 8px rgb(255, 255, 255);
+}

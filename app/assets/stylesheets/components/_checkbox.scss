@@ -1,0 +1,47 @@
+.tag-item {
+  display: inline-block;
+}
+
+.tag-selector {
+  position: absolute;
+  transform: scale(0);
+}
+
+.tag-selector + label {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.9rem;
+  border-radius: 50rem;
+  padding: 0.1rem 0.5rem;
+  background-color: lightgreen;
+  color: rgb(0, 0, 0);
+  border: 1px solid green;
+  margin-right: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.tag-selector:checked + label {
+  background-color: green;
+  color: white;
+}
+
+.month-selector {
+  display: inline-block;
+  font-family: Arial, sans-serif;
+}
+
+.month-selector + label {
+  cursor: pointer;
+  font-size: 1rem; /* Adjust the font size here */
+  border-radius: 50rem;
+  padding: 0.3rem 0.8rem; /* Adjust padding to accommodate larger font */
+  background-color: lightgreen;
+  color: green;
+  border: 1px solid green;
+  margin-right: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.month-selector:focus + label {
+  border-color: green;
+}
