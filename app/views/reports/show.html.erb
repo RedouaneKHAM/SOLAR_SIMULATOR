@@ -11,16 +11,20 @@
 </style>
 <div class="container mt-3 ">
   <div class="card text-center rounded shadow bg-white">
-    <div class="card-body">
-      <h1 class="card-title">Your Report</h1>
-      <% @report.simulation %>
-      <p>Votre consommation journalière <%= @report.daily_consumption %> Wh/day</p>
-      <p>Le kit solaire proposé a une <%= render partial: "power", locals: { report: @report } %></p>
-    </div>
-    <div>
-      <canvas data-controller="chart"
-      data-chart-chartdata1-value="<%= @chartdata1.to_json %>"
-      data-chart-chartdata2-value="<%= @chartdata2.to_json %>"></canvas>
-    </div>
+    <div class="card-body d-flex w-100">
+      <div class="w-50">
+        <canvas data-controller="chart"
+        data-chart-chartdata1-value="<%= @chartdata1.to_json %>"
+        data-chart-chartdata2-value="<%= @chartdata2.to_json %>"
+        data-chart-chartdata3-value="<%= @chartdata3.to_json %>"></canvas>
+      </div>
+      <div class="w-50">
+        <h1 class="card-title">Your Report</h1>
+        <% @report.simulation %>
+        <p>Votre consommation journalière <%= @report.daily_consumption %> Wh/day</p>
+        <p>Le kit solaire proposé a une
+        <%= render partial: "power", locals: { report: @report } %></p>
+      </div>
   </div>
+</div>
 </div>

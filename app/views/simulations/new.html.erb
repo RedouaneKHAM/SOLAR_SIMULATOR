@@ -1,5 +1,5 @@
-<div class="container my-3 p-4 bg-white rounded" style="max-width: 800px;">
-  <%= simple_form_for @simulation do |f| %>
+<div class="container my-3 p-4 bg-white rounded" style="max-width: 800px;" data-controller="submit-alert">
+  <%= simple_form_for @simulation, html:{ data: { action: "submit->submit-alert#fire"}} do |f| %>
     <div class="row">
       <div class="col-md-12">
         <p>Please fill out the form below to simulate the appropriate solar kit for your needs. Ensure you select your region, property type, and input the monthly energy consumption from your electricity bills. For accurate results, it's recommended to choose one month from each trimester.</p>
