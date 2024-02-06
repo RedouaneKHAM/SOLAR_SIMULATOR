@@ -15,21 +15,21 @@ export default class extends Controller {
       data: {
         labels: ["2024","2025","2026","2027","2028","2029","2030","2031","2032","2033"],
         datasets: [{
-          label: 'Annual electricity expenses in DHS',
+          label: 'Cumulative annual electricity bill payment in Dhs',
           data: JSON.parse(this.chartdata1Value),
           fill: false,
           borderColor: 'rgb(255, 0, 0)',
           tension: 0.1
         },
         {
-          label: 'annual amount invested in DHS',
+          label: 'Annual cumulative payment for solar panel',
           data: JSON.parse(this.chartdata2Value),
           fill: false,
           borderColor: 'rgb(0, 128, 0)',
           tension: 0.1
         },
         {
-          label: 'annual amount invested in DHS',
+          label: 'Total investment in Dhs',
           data: JSON.parse(this.chartdata3Value),
           fill: false,
           borderColor: 'rgb(0, 0, 255)',
