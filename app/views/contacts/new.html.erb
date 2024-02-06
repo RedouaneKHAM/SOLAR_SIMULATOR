@@ -19,8 +19,8 @@
   }
 </style>
 
-<div class="container my-3 p-4 bg-white rounded" style="max-width: 800px;">
-  <%= simple_form_for @contact do |f| %>
+<div class="container my-3 p-4 bg-white rounded" style="max-width: 800px;"  data-controller="submit-alert">
+  <%= simple_form_for @contact, html:{ data: { action: "submit->submit-alert#fire"}} do |f| %>
     <div class="row">
       <div class="col-md-6">
         <%= f.input :phone_number %>

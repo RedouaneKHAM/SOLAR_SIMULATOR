@@ -7,7 +7,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     @contact.user = current_user
     if @contact.save!
-      redirect_to contact_path(@contact)
+      redirect_to root_path
     else
       render :new, status: :unprocessable_entity
     end
