@@ -21,15 +21,15 @@
           </div>
           <div class="col-md-8 bg-white">
             <div class="card-body">
-              <h5 class="card-title">Solarkit <%=@solarkit.id  %></h5>
-              <p class="card-text">Power is <%= @solarkit.power %></p>
-              <p class="card-text">min_production is <%= @solarkit.min_production %></p>
-              <p class="card-text">max_production is <%= @solarkit.max_production %></p>
-              <p class="card-text">price is <%= @solarkit.price %></p>
-              <p class="card-text"><small class="text-muted">installation_price is <%= @solarkit.installation_price %></small></p>
+              <h1 class="card-title">Solarkit <%=@solarkit.id  %></h1>
+              <p class="card-text"><strong>Power is</strong> <%= @solarkit.power %></p>
+              <p class="card-text"><strong>Minimum production:</strong> <%= @solarkit.min_production %></p>
+              <p class="card-text"><strong>Maximum production:</strong> <%= @solarkit.max_production %></p>
+              <p class="card-text"><strong>Price is</strong> <%= @solarkit.price %></p>
+              <p class="card-text"><small class="text-muted"><strong>Installation price is</strong> <%= @solarkit.installation_price %></small></p>
             </div>
-            <div class="bg-success text-white p-3">
-                <%= link_to "cliquez ici commadez votre kit ", root_path, class: "text-white"%>
+            <div class="bg-success text-white p-3" data-controller="order" >
+                <%= link_to "cliquez ici commadez votre kit ", root_path, class: "text-white", data: { action: "click->order#showAlert"}%>
             </div>
           </div>
         </div>

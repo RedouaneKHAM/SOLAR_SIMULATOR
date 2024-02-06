@@ -1,25 +1,27 @@
-<div class="container my-3 p-4 bg-white rounded" style="max-width: 800px;" data-controller="submit-alert">
+<div class="container bg-white my-3 p-4 rounded" style="max-width: 800px;" data-controller="submit-alert">
   <%= simple_form_for @simulation, html:{ data: { action: "submit->submit-alert#fire"}} do |f| %>
     <div class="row">
       <div class="col-md-12">
-        <p>Please fill out the form below to simulate the appropriate solar kit for your needs. Ensure you select your region, property type, and input the monthly energy consumption from your electricity bills. For accurate results, it's recommended to choose one month from each trimester.</p>
+        <p class="text fs-5">Please fill out the form below to simulate the appropriate solar kit for your needs. Ensure you select your region, property type, and input the monthly energy consumption from your electricity bills. For accurate results, it's recommended to choose one month from each trimester.</p>
       </div>
       <div class="col-md-6">
+        <%= label_tag :property_type, "Type of Property" %><hr>
         <% ['Maison avec toiture', 'Maison sans toiture', 'Industrie', 'Ferme', 'Villa', 'Appartement'].each do |property_type| %>
           <%= f.radio_button :type_of_property, property_type, class: 'tag-selector', id: property_type.parameterize %>
           <%= label_tag property_type.parameterize, property_type, class: 'tag-item' %>
         <% end %>
       </div>
       <div class="col-md-6">
+        <%= label_tag :region, "Region" %><hr>
         <% ['Tanger-Tétouan-Al Hoceima', 'Oriental', 'Fès-Meknès', 'Rabat-Salé-Kénitra', 'Beni Mellal-Khénifra', 'Casablanca-Settat', 'Marrakech-Safi', 'Drâa-Tafilalet', 'Souss-Massa', 'Guelmim-Oued Noun', 'Laâyoune-Saguia al Hamra', 'Dakhla-Oued Ed-Dahab'].each do |region| %>
-          <%= f.radio_button :region, region, class: 'tag-selector', id: region.parameterize %>
+          <%= f.radio_button :region, region, class: 'tag-selector other', id: region.parameterize %>
           <%= label_tag region.parameterize, region, class: 'tag-item' %>
         <% end %>
       </div>
     </div>
     <div class="row">
       <div class="col-md-3">
-      <%= f.input :month_fst, label: "Jan/Feb/Mar", input_html: { min: 0 }, class: 'month-selector' %>
+        <%= f.input :month_fst, label: "Jan/Feb/Mar", input_html: { min: 0 }, class: 'month-selector' %>
       </div>
       <div class="col-md-3">
         <%= f.input :month_scd, label: "Apr/May/Jun", input_html: { min: 0 }, class: 'month-selector' %>
@@ -37,4 +39,5 @@
       </div>
     </div>
   <% end %>
+</div>
 </div>
