@@ -11,18 +11,18 @@
 </style>
 
 <div class="container mt-10">
-  <h1 class="text-center my-4">Nos kits solaires</h1>
+  <h1 class="text-center my-4">Our Solar Kits</h1>
   <div class="row">
     <% @solarkits.each do |solarkit| %>
       <div class="col-md-4">
         <div class="card mb-2">
           <%= image_tag(solarkit.image) %>
           <div class="card-body">
-            <h5 class="card-title text-center">Power is <%= solarkit.power %></h5>
-            <h5 class="card-text text-center">Min_production is <%= solarkit.min_production %></h5>
-            <h5 class="card-text text-center">Max_production is <%= solarkit.max_production %></h5>
-            <h5 class="card-text text-center">Price is <%= solarkit.price %></h5>
-            <h5 class="card-text text-center">Installation_price is <%= solarkit.installation_price %></h5>
+            <h5 class="card-title text-center">The Power of the solar kit : <i><%= solarkit.power %> Wc </i></h5>
+            <h5 class="card-text text-center">Minimum production :<i> <%= solarkit.min_production %> Wh/j </i></h5>
+            <h5 class="card-text text-center">Maximum production : <i><%= solarkit.max_production %> Wh/j </i></h5>
+            <h5 class="card-text text-center">The price of the solar kit : <i><%= solarkit.price %> MAD </i></h5>
+            <h5 class="card-text text-center">The price of Installation : <i><%= solarkit.installation_price %> MAD </i></h5>
           </div>
         </div>
       </div>
