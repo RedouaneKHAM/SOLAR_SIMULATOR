@@ -2,7 +2,7 @@
   <%= simple_form_for @simulation, html:{ data: { action: "submit->submit-alert#fire"}} do |f| %>
     <div class="row">
       <div class="col-md-12">
-        <p class="text fs-5"><strong>Please fill out the form below to simulate the appropriate solar kit for your needs. Ensure you select your region, property type, and input the monthly energy consumption from your electricity bills. For accurate results, it's recommended to choose one month from each trimester.</strong></p>
+        <p class="text fs-5"><strong>Please fill out the form below to simulate the appropriate solar kit for your needs. Ensure you select your region, property type, and input the monthly energy consumption from your electricity bills. For accurate results, it's recommended to choose one month from each trimester.Please note that when entering your monthly energy consumption from your electricity bills, ensure that you input the value in watts. Typically, electricity bills list the consumption in kilowatts (kW). To convert this to watts, simply add three zeros to the value listed on your bill. For example, if your bill states 500 kW, you should input 500,000 watts into the form.</strong></p>
       </div>
       <div class="col-md-6">
         <%= label_tag :property_type, "Type of Property" %><hr>
@@ -21,16 +21,16 @@
     </div>
     <div class="row">
       <div class="col-md-3">
-        <%= f.input :month_fst, label: "Jan/Feb/Mar(en Kw)", input_html: { min: 0 }, class: 'month-selector' %>
+        <%= f.input :month_fst, label: "Jan/Feb/Mar(Watt)", input_html: { min: 0 }, class: 'month-selector' %>
       </div>
       <div class="col-md-3">
-        <%= f.input :month_scd, label: "Apr/May/Jun (en Kw)", input_html: { min: 0 }, class: 'month-selector' %>
+        <%= f.input :month_scd, label: "Apr/May/Jun (Watt)", input_html: { min: 0 }, class: 'month-selector' %>
       </div>
       <div class="col-md-3">
-        <%= f.input :month_trd, label: "Jul/Aug/Sep (en Kw)", input_html: { min: 0 }, class: 'month-selector' %>
+        <%= f.input :month_trd, label: "Jul/Aug/Sep (Watt)", input_html: { min: 0 }, class: 'month-selector' %>
       </div>
       <div class="col-md-3">
-        <%= f.input :month_fth, label: "Oct/Nov/Dec (en Kw)", input_html: { min: 0 }, class: 'month-selector' %>
+        <%= f.input :month_fth, label: "Oct/Nov/Dec (Watt)", input_html: { min: 0 }, class: 'month-selector' %>
       </div>
     </div>
     <div class="row">
