@@ -5,7 +5,7 @@ export default class extends Controller {
 
   static values = {
     chartdata1: String,
-    chartdata2: String,
+    // chartdata2: String,
     chartdata3: String
   }
   connect() {
@@ -21,13 +21,7 @@ export default class extends Controller {
           borderColor: 'rgb(255, 0, 0)',
           tension: 0.1
         },
-        {
-          label: 'Annual cumulative payment for solar panel',
-          data: JSON.parse(this.chartdata2Value),
-          fill: false,
-          borderColor: 'rgb(0, 128, 0)',
-          tension: 0.1
-        },
+
         {
           label: 'Total investment in Dhs',
           data: JSON.parse(this.chartdata3Value),

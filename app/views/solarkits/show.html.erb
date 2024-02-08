@@ -22,11 +22,11 @@
           <div class="col-md-8 bg-white">
             <div class="card-body">
               <h1 class="card-title">Solarkit <%=@solarkit.id  %></h1>
-              <p class="card-text"><strong>Power is</strong> <%= @solarkit.power %></p>
-              <p class="card-text"><strong>Minimum production:</strong> <%= @solarkit.min_production %></p>
-              <p class="card-text"><strong>Maximum production:</strong> <%= @solarkit.max_production %></p>
-              <p class="card-text"><strong>Price is</strong> <%= @solarkit.price %></p>
-              <p class="card-text"><small class="text-muted"><strong>Installation price is</strong> <%= @solarkit.installation_price %></small></p>
+              <p class="card-text"><strong>Power of the solar kit is : </strong> <%= @solarkit.power %> Wc</p>
+              <p class="card-text"><strong>Minimum production : </strong> <%= @solarkit.min_production %> Wh/j</p>
+              <p class="card-text"><strong>Maximum production : </strong> <%= @solarkit.max_production %> Wh/j</p>
+              <p class="card-text"><strong>Price is : </strong> <%= @solarkit.price %> MAD</p>
+              <p class="card-text"><strong>Installation price is :</strong> <%= @solarkit.installation_price %> MAD </p>
             </div>
             <div class="bg-success text-white p-3" data-controller="order" >
                 <%= link_to "Click here to order your kit", root_path, class: "text-white", data: { action: "click->order#showAlert"}%>
