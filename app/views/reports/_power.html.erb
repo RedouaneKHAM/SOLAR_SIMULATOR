@@ -35,7 +35,9 @@
       <div>Kit power is 3690 Wc</div>
     <%= link_to "See your solar kit", solarkit_path(5), class: "btn btn-success my-3" %>
 <% else %>
+
   <% flash[:notice] = "Contact us for more information" %>
   <% redirect_to contacts_new_path %>
+
 <% end %>
   </div>

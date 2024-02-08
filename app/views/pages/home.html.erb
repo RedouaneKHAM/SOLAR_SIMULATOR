@@ -1,15 +1,19 @@
 <%= content_for(:navbar_class, "navbar-home") %>
 <div class="banner">
-
-    <div class="banner-content">
-      <div class="d-flex flex-column">
-        <div class="p-2"><h1>Solar Energy Services at Your Doorstep</h1>
-        </div>
-        <div class="p-2"><p class="class=text w-70">Welcome to our solar kit store! Here,you can explore our range of solar kits tailored to meet your energy needs. Calculate the perfect solar solution based on your monthly electricity consumption, making a wise investment while contributing to a greener world. Start your journey towards sustainable energy today!</p>
-        </div>
-        <div class="p-2"><a href="<%= new_simulation_path %>" class="btn btn-outline-success btn-lg custom-button"><i class="fa-solid fa-calculator"></i> Start your simulation</a>
-        </div>
-      </div>
+  <div class="container">
+  <div class="banner-content" style="text-align:center;">
+    <h1>Solar Energy Services at Your Doorstep</h1>
+    <p class="text">Welcome to our solar kit store! Here,
+     you can explore our range of solar kits
+      tailored to meet your energy needs.
+       Calculate the perfect solar solution
+        based on your monthly electricity consumption,
+         making a wise investment while contributing
+          to a greener world. Start your journey towards
+           sustainable energy today!</p>
+    <a href="<%= new_simulation_path %>" class="btn btn-outline-success btn-lg custom-button">
+      <i class="fa-solid fa-calculator"></i> Start your simulation
+    </a>
     </div>
   </div>
 
@@ -19,6 +23,8 @@
     <div class="card-body">
       <h4 class="card-title"><strong>Save Money </strong></h4>
       <br>
+
+
       <p class="card-text" style="text-align:justify;">Reduce Your Electricity Bills And Make Eco-Friendly Choices. GO GREEN !</p>
     </div>
   </div>
@@ -42,6 +48,7 @@
       <br>
         <p class="card-text" style="text-align:justify;">Select The Perfect Solar Kit Adapted To Your Energy Needs</p>
     </div>
+
   </div>
 </div>
 <div>
