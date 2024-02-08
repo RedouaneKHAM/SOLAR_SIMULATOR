@@ -19,19 +19,23 @@
   }
 </style>
 
-<div class="container my-3 p-4 bg-white rounded" style="max-width: 800px;"  data-controller="submit-alert">
-  <p class="text"><strong>Have questions or inquiries? We're here to help! Whether you need assistance with placing an order, have feedback to share, or simply want to get in touch, we're ready to assist you. Feel free to reach out to us using the contact form below, and our team will respond to you as soon as possible. Thank you for considering us for your needs, and we look forward to hearing from you!</strong></p>
-  <%= simple_form_for @contact, html:{ data: { action: "submit->submit-alert#fire"}} do |f| %>
+<div class="container my-3 p-4 bg-white rounded" style="max-width: 800px;" data-controller="submit-alert">
+  <p class="text"><strong>Have questions or inquiries? We're here to help! Whether you need assistance
+   with placing an order, have feedback to share, or simply want to get in touch, we're ready to assist
+    you. Feel free to reach out to us using the contact form below, and our team will respond to you as
+     soon as possible. Thank you for considering us for your needs, and we look forward to hearing from
+      you!</strong></p>
+  <%= simple_form_for @contact, html: { data: { action: "submit->submit-alert#fire" } } do |f| %>
     <div class="row">
       <div class="col-md-6">
         <%= f.input :phone_number %>
       </div>
     </div>
     <div class="row" data-controller="character-counter">
-      <div class="col-md-12" >
-        <%= f.input :message, html:{ data: { action: "keyup->character-counter#updateCounter"}} %>
-      </div>
+      <div class="col-md-12">
+        <%= f.input :message, html: { data: { action: "keyup->character-counter#updateCounter" } } %>
         <i data-character-counter-target="counter"></i>
+      </div>
     </div>
     <div class="row">
       <div class="col-md-12 my-3 text-end">
