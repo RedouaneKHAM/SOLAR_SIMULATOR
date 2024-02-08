@@ -22,7 +22,7 @@
       <div class="w-50">
         <h1 class="carde-title mt-3">Your Report</h1>
         <% @report.simulation %>
-        <p>Your daily consumption <%= @report.daily_consumption %> Wh/day</p>
+        <p>Your daily consumption <%= @report.daily_consumption %> Kw/day</p>
         <p>The solar kit proposed has a
         <%= render partial: "power", locals: { report: @report } %></p>
       </div>

@@ -33,10 +33,10 @@
         <div class="card my-2">
           <%= image_tag(solarkit.image, class: "card-img-top") %>
           <div class="card-body">
-            <h5 class="card-title text-center"><span class="power"><%= solarkit.power %> Wc</span></h5>
-            <h5 class="text-center mb-3"><span class="price"><%= solarkit.price %> MAD</span></h5>
+            <h5 class="card-title text-center"><span class="power"><a><i class="fa-sharp fa-solid fa-battery-full"></i></i></a><br> <%= solarkit.power %> Wc</span></h5>
+            <h5 class="text-center mb-3"><span class="price"><a><i class="fa-solid fa-money-check-dollar"></i></a> <br><%= solarkit.price %> MAD</span></h5>
             <p class="text-center"><a href="#" class="btn btn-success btn-sm"></a></p>
-            <%= link_to"View Details", solarkit_path(solarkit.id), class:"btn btn-outline-success rounded-pill border border-2 border border-dark" %>
+            <%= link_to"View Details", solarkit_path(solarkit.id), class:"btn btn-outline-success rounded-pill border border-5 border border-success" %>
           </div>
         </div>
       </div>
