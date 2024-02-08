@@ -9,7 +9,8 @@
     border-color: #008000;
   }
 </style>
-<div style="height:570px" class="container mt-3 ">
+<div style="height:570px">
+<div  class="container p-3 ">
   <div class="carde text-center rounded shadow bg-white">
     <div class="card-body d-flex w-100">
       <div class="w-50">
@@ -19,12 +20,13 @@
         data-chart-chartdata3-value="<%= @chartdata3.to_json %>"></canvas>
       </div>
       <div class="w-50">
-        <h1 class="carde-title">Your Report</h1>
+        <h1 class="carde-title mt-3">Your Report</h1>
         <% @report.simulation %>
         <p>Your daily consumption <%= @report.daily_consumption %> Wh/day</p>
         <p>The solar kit proposed has a
         <%= render partial: "power", locals: { report: @report } %></p>
       </div>
   </div>
+</div>
 </div>
 </div>
