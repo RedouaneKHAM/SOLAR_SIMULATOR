@@ -33,9 +33,10 @@
     </div>
     <div class="row" data-controller="character-counter">
       <div class="col-md-12">
-        <%= f.input :message, html: { data: { action: "keyup->character-counter#updateCounter" } } %>
-        <%= content_tag :i, "", data: { character_counter_target: "counter" } %>
+        <%= f.input :message, input_html: { data: { action: "keyup->character-counter#updateCounter" } } %>
       </div>
+      <%# <span>Message length:</span> %>
+      <p data-character-counter-target="counter"></p>
     </div>
     <div class="row">
       <div class="col-md-12 my-3 text-end">
