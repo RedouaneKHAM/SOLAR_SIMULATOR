@@ -21,8 +21,8 @@
       <div class="w-50">
         <h1 class="carde-title">Your Report</h1>
         <% @report.simulation %>
-        <p>Votre consommation journalière <%= @report.daily_consumption %> Wh/day</p>
-        <p>Le kit solaire proposé a une
+        <p>Votre consommation journalière : <%= @report.daily_consumption %> Wh/day</p>
+        <p>Le kit solaire proposé :
         <%= render partial: "power", locals: { report: @report } %></p>
       </div>
   </div>
