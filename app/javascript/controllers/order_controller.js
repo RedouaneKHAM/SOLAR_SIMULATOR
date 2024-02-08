@@ -10,11 +10,11 @@ export default class extends Controller {
     Swal.fire({
       position: "top-end",
       icon: "success",
-      title: "Your work has been saved",
+      title: "We have recieved you order, we will contact you very soon",
       showConfirmButton: false,
       timer: 1500
     }).then(() => {
-        window.location.href = "/"
+      window.location.href = "/"
     });
   }
 }
