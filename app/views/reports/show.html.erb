@@ -10,23 +10,25 @@
   }
 </style>
 <div style="height:570px">
-<div  class="container p-3 ">
-  <div class="carde text-center rounded shadow bg-white">
-    <div class="card-body d-flex w-100">
-      <div class="w-50">
-        <canvas data-controller="chart"
-        data-chart-chartdata1-value="<%= @chartdata1.to_json %>"
-        data-chart-chartdata2-value="<%= @chartdata2.to_json %>"
-        data-chart-chartdata3-value="<%= @chartdata3.to_json %>"></canvas>
+  <div class="container p-3 ">
+    <div class="carde text-center rounded shadow bg-white">
+      <div class="card-body d-flex w-100">
+        <div class="row w-100">
+          <div class="col-md-6"> <!-- Apply Bootstrap's column class -->
+            <canvas data-controller="chart"
+              data-chart-chartdata1-value="<%= @chartdata1.to_json %>"
+              data-chart-chartdata2-value="<%= @chartdata2.to_json %>"
+              data-chart-chartdata3-value="<%= @chartdata3.to_json %>"></canvas>
+          </div>
+          <div class="col-md-6"> <!-- Apply Bootstrap's column class -->
+            <h1 class="carde-title mt-3">Your Report</h1>
+            <% @report.simulation %>
+            <p>Your daily consumption <%= @report.daily_consumption %> Wh/day</p>
+            <p>The solar kit proposed has a
+              <%= render partial: "power", locals: { report: @report } %></p>
+          </div>
+        </div>
       </div>
-      <div class="w-50">
-        <h1 class="carde-title mt-3">Your Report</h1>
-        <% @report.simulation %>
-        <p>Your daily consumption <%= @report.daily_consumption %> Kw/day</p>
-        <p>The solar kit proposed has a
-        <%= render partial: "power", locals: { report: @report } %></p>
-      </div>
+    </div>
   </div>
-</div>
-</div>
 </div>
